@@ -1,0 +1,255 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="http://localhost:8080/favicon.ico">
+
+    <title>Painting API: Artist As A Service</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="bootstrap.min.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Custom styles for this template -->
+    <link href="carousel.css" rel="stylesheet">
+	<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-79595009-1', 'auto');
+  ga('send', 'pageview');
+
+	</script>
+  </head>
+  <body>
+    <div class="navbar-wrapper">
+      <div class="container">
+
+        <nav class="navbar navbar-inverse navbar-static-top">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="index.html">Black Box</a>
+            </div>
+            <div id="navbar" class="navbar-collapse collapse">
+              <ul class="nav navbar-nav">
+                <li><a href="index.html">Get Started</a></li>
+                <li><a href="state">Artist Statement</a></li>
+                <li><a href="about">About</a></li> 
+                <li><a href="api">API</a></li> 
+                <li><a href="contact">Contact</a></li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </div>
+ 
+<div class="container marketing"> 
+
+      <div class="nocara"></div>
+      <div class="row">
+        <div class="col-md-7">
+        	<h2 class="featurette-heading">Art As A Service</h2>
+					<h3>
+Library & JSON API Reference.
+					</h3>
+					<p class="lead"> 
+Collage has the amazing ability to destroy any conception of a final work, the chaotic fragments re-arranging and ripping their own story into your canvas. There's a force inside these fragments that wants to be unlocked, the materials and I interrogate each other. Revealed thoughts from a opaque interface.</p>
+
+					<p class="lead"> 
+This is a pragmatic method to send me fragments, meant to be woven into running services or programs that occasionally run. 
+My work is best executed when used as a logging service would with zero interaction. Over time, this establishes a context based off fragments of data. On <b>triggers</b> in your application works will simply arrive at the door when the code (Not you, or I) deem fit.</p> 
+
+					<p class="lead"> 
+					Looking to visualize the data from a stack of files? They've been sitting on disk for years, <a href="index.html#create">why not get them on the wall?</a></p>
+
+					<p class="lead"> 
+					This project is a attempt at reconciling the divide between Artmaking process and Engineering sensibilities. <b>f(x) -> [Object Art]</b> if you will. Any input will suffice, f(💩) will be evaluated!</p>
+					<p class="lead"> 
+Lastly a thank you for interacting with this project in its ideal way. Integrate me into your systems, feed me data and poke().</p> 
+				</div> 
+				<div class="col-md-5">
+					<p><br/><br/></p>
+          <img class="featurette-image img-responsive center-block" src="img/coll.jpg" alt="That is actually a thing. Check it out.">
+				</div>
+      </div>
+
+      <hr class="featurette-divider">
+      <div class="row">
+					<div class="col-md-6">
+          	<h2 class="featurette-heading">Library  <a href="https://godoc.org/github.com/germ/go-blackbox"><img src="https://godoc.org/github.com/germ/go-blackbox?status.svg" alt="GoDoc"></a></h2>
+									<p class="lead">
+										I've created a simplistic library for this API in Go, <a href="https://github.com/germ/go-blackbox">hosted on GitHub</a>. The library allows uploading and managing sessions in a simple manner. Wrapping existing readers transparently or new instrumentation, adding BlackBox to your infrastructure only takes a few lines of set up! <br/><br/>
+
+				Here's part of a program that writes to a (mythical) attached line printer. When the printer jams and <a href="https://www.youtube.com/watch?v=fjsSr3z5nVk">eventually starts on fire</a> its last words are uploaded, and the painting begins. <br /><br/>
+
+	
+									</p>
+					</div>
+					<div class="col-md-6">
+						<script src="https://gist.github.com/germ/1a4c83726ac8c2b58748989b7214855a.js" ></script>
+					</div>
+			</div>
+
+      <hr class="featurette-divider">
+      <div class="row">
+          <h2 class="featurette-heading">Endpoint/Docs</h2>
+          <p class="lead">
+						Base URL: <code>https://theblackbox.ca/api</code>
+					</p>
+
+							<div class="col-md-6">
+									<h3>Query Parameters</h3>
+									<p>
+										The Available parameters are
+									</p>
+										<ul>
+											<li><code>action</code>: "create" or "finalize"</li>
+											<li><code>ID</code>: Your unique ID used for authing requests, obtained below.</li>
+											<li><code>session</code>: The works identifier</li>
+											<li><code>pay</code>: The offered amount for the finished work</li>
+										</ul>
+							</div>
+
+			<div class="col-md-6">
+					<h3>Response Object</h3>
+						<ul>
+							<li><code>Success</code>: (Bool) describing if the request action was preformed sucessfully</li>
+							<li><code>Error</code>: (String) contains an error (set only if Success is false)</li>
+							<li></li>
+							<li><code>ID</code>: (String) Your user ID key used in request</li>
+							<li><code>Session</code>: (String) The specfic work that the request refers to</li>
+							<li><code>Approved</code>: (Bool) If this work has been reviewed and accepted/charged</li>
+							<li><code>Sessions</code>: ([]String) List of all sessions for the account</li>
+						</ul>
+			</div>
+			</div>
+      <hr class="featurette-divider">
+
+			<div class="row featurette">
+				<h2>Workflow</h2>
+				<div class="col-md-7">
+				<p> A typical work flow looks like this:<br/>
+					<ul>
+						<li>(Create Session ) A call to /api<code>?action=create</code>&ID=1234 (saving the Session var)</li>
+						<li>(Store dialogue ) POST requests to /api?<code>session=7890</code>&ID=abcd</li>
+						<li>(Payment Bid    ) Call to /api?<code>pay=12345</code>&session=7890&ID=abcd</li>
+						<li>(Submit work req) A call to /api?<code>action=finalize</code>&session=7890&ID=abcd</li>
+					</ul>
+				</p>
+
+				<table>
+				<tr>
+					<td><label>Action</label></td>
+					<td><label>Required Args</label></td>
+					<td><label>Effect</label></td>
+				</tr>
+				<tr>
+					<td> <code>/api?action=create</code></td>
+					<td> (ID) </td>
+					<td> Create returns a response object with a new Session </td>
+				</tr>
+				<tr>
+					<td> <code>POST /api</code></td>
+					<td> (ID, Ses) </td>
+					<td> Stores the POSTed files to a given session</td>
+				</tr>
+				<tr>
+					<td> <code>/api?action=finalize</code></td>
+					<td> (ID, Ses, pay) </td>
+					<td> Submit a session for approval</td>
+				</tr>
+			</table>
+
+			<p class="lead"> <br/>If you run into issues, compare against the Library implementation or simply <a href="contact">contact me.</a></p>
+			</div>
+
+				<div class="col-md-5">
+						<h3>Example</h3>
+						POST: URL: <code>https://theblackbox.ca/api?ID=myID&action=finalize&session=longsessionID</code> <br/> POST: Form (An arbitrary image) <br/><br/>
+					Response:<br/>
+<!-- Dear reader, I regret to show you the following eyesore. 
+
+		This is a free ticket to beat me, should you meet me.
+											Yours in Purgatory,
+													- The BlackBox -->
+						{  <br/>
+  &nbsp;&nbsp;&nbsp;&nbsp;<code>"Success"</code>:true,<br/>
+  &nbsp;&nbsp;&nbsp;&nbsp;<code>"Error"</code>:"",<br/>
+ &nbsp;&nbsp;&nbsp;&nbsp; <code>"ID"</code>:"longsessionID",<br/>
+ &nbsp;&nbsp;&nbsp;&nbsp; <code>"Session"</code>:"myID",<br/>
+  &nbsp;&nbsp;&nbsp;&nbsp;<code>"Approved"</code>:false,<br/>
+  &nbsp;&nbsp;&nbsp;&nbsp;<code>"Sessions"</code>:[  <br/>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"8612e149-f6e4-4d59-7288-e6fd095209e2",<br/>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"a4d446d2-bdab-4a8a-7793-bd842924855a"<br/>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;]<br/>
+		
+}<br/>
+				</div>
+			</div>
+
+
+			<hr class="featurette-divider">
+
+      <div class="row featurette">
+        <div class="col-md-8">
+          <h2 class="featurette-heading">API Credentials</h2>
+          <p class="lead">Black Box uses Stripe for all of our processing, It keeps your data safe and out of my hands and provides a safe fraud prevention service. In order to use the API we require a payment source for later charging, this also ties into user management. We do not charge until the work is ready to begin, and has been (manually) approved. This form will simply register you as a customer no charge will be made!</p>
+						<form action="http://localhost:8080/final?apiCall=true" method="POST">
+							<script
+								src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+								data-key="pk_live_EYKEPhkxU4twMsUjNMQwtg5d"
+								data-image="/img/cube.png"
+								data-name="Black Box Paints"
+								data-description="1 Art Unit"
+								data-currency="cad"
+								data-amount="0"
+								data-locale="auto"
+								data-shipping-address="true"
+								data-label="Get Credentials"
+							></script>
+						</form>
+        </div>
+			</div>
+      <hr class="featurette-divider">
+
+      <!-- FOOTER -->
+      <footer>
+        <p class="pull-right"><a href="api#">Back to top</a></p>
+        <p>&copy; 2017 Black Box Paintings. &middot; <a href="state">Artist Statement</a> &middot; <a href="contact.html">Contact</a></p>
+      </footer>
+
+    </div><!-- /.container -->
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="jquery.min.js"><\/script>')</script>
+    <script src="bootstrap.min.js"></script>
+    <!-- Just to make our placeholder images work. Don't actually copy the next line! -->
+    <script src="holder.min.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="ie10-viewport-bug-workaround.js"></script>
+  </body>
+</html>

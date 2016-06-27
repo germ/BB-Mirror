@@ -1,0 +1,230 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="http://localhost:8080/favicon.ico">
+
+    <title>Blackbox: Paintings As A Service.</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="bootstrap.min.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Custom styles for this template -->
+    <link href="carousel.css" rel="stylesheet">
+	<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-79595009-1', 'auto');
+  ga('send', 'pageview');
+
+	</script>
+  </head>
+  <body>
+    <div class="navbar-wrapper">
+      <div class="container">
+
+        <nav class="navbar navbar-inverse navbar-static-top">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="index.html">Black Box</a>
+            </div>
+            <div id="navbar" class="navbar-collapse collapse">
+              <ul class="nav navbar-nav">
+                <li><a href="index.html">Get Started</a></li>
+                <li><a href="state">Artist Statement</a></li>
+                <li><a href="about">About</a></li> 
+                <li><a href="api">API</a></li> 
+                <li><a href="contact">Contact</a></li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </div>
+
+    <!-- Carousel
+    ================================================== -->
+    <div id="myCarousel" class="carousel slide" data-ride="carousel">
+      <!-- Indicators -->
+      <ol class="carousel-indicators">
+        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+        <li data-target="#myCarousel" data-slide-to="1"></li>
+        <li data-target="#myCarousel" data-slide-to="2"></li>
+      </ol>
+      <div class="carousel-inner" role="listbox">
+        <div class="item active">
+          <img class="first-slide" src="img/juan.jpg" alt="First slide">
+          <div class="container">
+            <div class="carousel-caption">
+			    		<h1><b>Black Box</b> <i>n</i><br/></h1> 
+							<h4>
+								<b>1</b> A complicated electronic device that functions and is packaged as a unit and whose internal mechanism is hidden from or or mysterious to the user.<br/><br/>
+								<b>2</b> Anything that has mysterious or unknown internal functions or mechanisms.
+							</h4>
+            </div>
+          </div>
+        </div>
+        <div class="item">
+          <img class="second-slide" src="img/del.jpg" alt="Second slide">
+          <div class="container">
+            <div class="carousel-caption">
+              <h1>IoT to Art</h1>
+	      			<h3>One cURL request can launch a warhead, and automaticlly commemorate the event.<br/><br/>
+							Celebrate milestones with Slack logs and office paintings.<br/></h3>
+              <p><a class="btn btn-lg btn-primary" href="api" role="button">API Docs</a></p>
+            </div>
+          </div>
+        </div>
+        <div class="item">
+          <img class="third-slide" src="img/mal2.jpg" alt="Third slide">
+          <div class="container">
+            <div class="carousel-caption">
+              <h1>f(x) -> [Object Art]<br/></h1>
+              <h3><br/>It won't compile, but there's the descriptor.<br/></h3>
+              <p><a class="btn btn-lg btn-primary" href="state" role="button">Artist Statement</a></p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <a class="left carousel-control" href="index.html#myCarousel" role="button" data-slide="prev">
+        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="right carousel-control" href="index.html#myCarousel" role="button" data-slide="next">
+        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>
+    </div><!-- /.carousel -->
+
+
+    <!-- Marketing messaging and featurettes
+    ================================================== -->
+    <!-- Wrap the rest of the page in another container to center all the content. -->
+
+    <div class="container marketing">
+
+      <!-- Three columns of text below the carousel -->
+      <div class="row">
+        <div class="col-lg-4">
+          <img class="img-circle" src="img/palette.jpg" alt="Generic placeholder image" width="140" height="140">
+          <h2>Oil Paintings</h2>
+	  <p>Delivered straight to your door. At Blackbox we take your data, puzzle over it, and ship you a finished painting.</p>
+	  <p>More meaning then a commercial print from WalMart. Your own influence, on the wall.</p>
+          <p><a class="btn btn-info" href="create?id=0c3e2067-de56-494a-46a4-d5a6a293a0f9" role="button">Get Started</a></p>
+        </div><!-- /.col-lg-4 -->
+        <div class="col-lg-4">
+          <img class="img-circle" src="img/chip.jpg" alt="Generic placeholder image" width="140" height="140">
+          <h2>Programmable Art</h2>
+	<p>Blackbox exposes an API for the Artmaking process. Submit fragments from programs, instrument your codebase and set a trigger to let it speak. The infrastructure will document itself!
+	<p>I want to talk to you, via your walls and passer-by glances. Let me know your tongue and I will speak.</p>
+		<p>Poetry and code can mix.</p>
+          <p><a class="btn btn-danger btn-lg" href="api" role="button">View Docs</a></p>
+        </div><!-- /.col-lg-4 -->
+        <div class="col-lg-4">
+          <img class="img-circle" src="img/question.jpg" alt="Generic placeholder image" width="140" height="140">
+          <h2>Why?</h2>
+          <p>We have romantic trash and ugly analytically sound Art, Each are beautiful and mind, controls <b>when</b> is beautiful. A Metamodern experiment based on arbitrary poles.</p>
+		<p> A personal dialogue between you and a abstraction. <i>The clipart is intentional</i> find out why.</p>
+          <p><a class="btn btn-info" href="state" role="button">Artist Statement</a></p>
+        </div><!-- /.col-lg-4 -->
+      </div><!-- /.row -->
+
+
+      <hr class="featurette-divider">
+      <div class="row featurette">
+        <div class="col-md-7"> 
+          <h2 class="featurette-heading">Handcrafted Artisanal Emoji </h2>
+          <p class="lead">A project to explore dialogue using non-linear statements and image. <i>Wow, that sounds like bullcrap.</i>  The Feedback Loop is a playground, where you poke the box and the box <b>pokes back.</b></p>
+					<p class="lead">
+						<b><i>In English:</i></b> I'm lonely and want to talk. Join me?
+					</p>
+        </div>
+        <div class="col-md-5"> 
+          <img class="featurette-image img-responsive center-block" src="img/nonrep.jpg" alt="Nonrepresentational paints!">
+        </div>
+      </div>
+
+      <hr class="featurette-divider">
+      <div class="row featurette">
+        <div class="col-md-7 col-md-push-5">
+          <h2 class="featurette-heading">Hackers are not painters</h2>
+          <p class="lead">I am a Painter, Poet, Muralist, Programmer, Collagist, API-Glueman. These are my tools I will use to converse with you. What will be your voice? Simple english, perhaps a beautiful section of code, a core dump? Shall we have a friendly argument or liken monads and orchestra?</p>
+					<p class="lead">With the API talk to the Box vs JSON. Human crafted, machine generated; Server logs can now be hung on a wall.</p>
+        </div>
+        <div class="col-md-5 col-md-pull-7">
+          <p class="lead"><img class="featurette-image img-responsive center-block" src="img/ass.jpg" alt="ATTR: commons.wikimedia.org/wiki/File:JAssange.jpg"></p>
+        </div>
+      </div>
+      <hr class="featurette-divider">
+
+      <div class="row featurette">
+        <div class="col-md-7"> 
+          <h2 class="featurette-heading">Art API</h2>
+          <p class="lead">
+						At BlackBox we believe that software runs the metamodern world, so why not integrate ourselves into it? An API for crafting works from fragments floating through the datacenter, your terminal, IoT connected cat or otherwise. Graphs are so 2009, let us interpret those sales reports and place a wonderful object on your office walls.
+					</p>
+					<p class="lead">With a Go Library and JSON API, you can glue BlackBox into any project. <b>What isn't Art?</b></p>
+          <p><a class="btn btn-lg btn-primary" href="api" role="button">API Docs</a></p>
+        </div>
+        <div class="col-md-5"> 
+          <img class="featurette-image img-responsive center-block" src="img/dharma.jpg" alt="Nonrepresentational paints!">
+        </div>
+      </div>
+
+      <hr class="featurette-divider">
+
+      <div class="row featurette">
+        <div class="col-md-5">
+          <img class="featurette-image img-responsive center-block" src="img/unitcube.png" alt="Generic placeholder image">
+        </div>
+        <div class="col-md-7">
+          <h2 id="create" class="featurette-heading">It's not a poster or print. <span class="text-muted">It's "Art"</span></h2>
+          <p class="lead">By participating, you are shipped a unique oil painting on canvas, a short poem and possibly something else. Every order is considered a new conversation in the overall work. With the box, you are taking a chance, this is not a commission service do I paint pure requests. BlackBox <b>interprets</b>, and responds to the statements using my mediums. But your guidance is always welcomed.</p>
+	  			<p><a class="btn btn-danger btn-lg" href="create?id=0c3e2067-de56-494a-46a4-d5a6a293a0f9" role="button">Start the conversation.</a></p>
+        </div>
+      </div>
+
+      <hr class="featurette-divider">
+
+      <!-- FOOTER -->
+      <footer>
+        <p class="pull-right"><a href="index.html#">Back to top</a></p>
+        <p>&copy; 2017 Black Box Paintings. &middot; <a href="state">Artist Statement</a> &middot; <a href="contact.html">Contact</a></p>
+      </footer>
+
+    </div><!-- /.container -->
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="jquery.min.js"><\/script>')</script>
+    <script src="bootstrap.min.js"></script>
+    <!-- Just to make our placeholder images work. Don't actually copy the next line! -->
+    <script src="holder.min.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="ie10-viewport-bug-workaround.js"></script>
+  </body>
+</html>
